@@ -1,0 +1,152 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Roboto", serif;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 150px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: #637888;
+}
+h1 {
+  font-size: 4rem;
+}
+img {
+  width: 125px;
+}
+/* Table styles */
+table {
+  border-collapse: collapse;
+  border: 2px solid #637888;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+td,
+th {
+  border: 1px solid #637888;
+  padding: 10px 20px;
+}
+
+th {
+  background-color: #e1eacd;
+  color: #637888;
+}
+
+td {
+  text-align: center;
+}
+.table-btn {
+    width: 100px;
+    text-align: center;
+}
+ 
+/* End table styles */
+.btn {
+  padding: 10px 15px;
+  background-color: #637888;
+  border: 1px solid #637888;
+  border-radius: 5px;
+  color: #e1eacd;
+  font-weight: bold;
+}
+.btn:hover {
+  color: #637888;
+  background-color: #e1eacd;
+}
+/* Header */
+.header {
+  background-color: #bad8b6;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+.header img,
+.header h1 {
+  align-self: center;
+  justify-self: center;
+}
+/* Sidebar */
+.sidebar {
+  padding: 15px;
+  background-color: #e1eacd;
+  grid-area: sidebar;
+}
+.sidebar > div {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+/* Form */
+.form {
+  padding: 15px;
+  background-color: #f9f6e6;
+  border: 1px solid #f9f6e6;
+  border-radius: 10px;
+}
+.form-new,
+.form-edit,
+.table
+ {
+  display: none;
+}
+
+.form .fieldset {
+  border: none;
+}
+.fieldset legend {
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.fieldset div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.fieldset input {
+  margin: 10px 0;
+  outline: none;
+}
+.btn.submit {
+  display: block;
+  width: 123px;
+}
+/* Main */
+.main {
+  padding: 25px;
+  background-color: #f9f6e6;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px 1fr;
+  row-gap: 25px;
+}
+.main__title {
+    text-align: center;
+}
+.main__books {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
